@@ -1,0 +1,38 @@
+<h2 class="page-header">É a sua primeira vez aqui?</h2>
+<p>Entre com os seus dados para criar um usuario para acessar o sistema. Se você
+  já cadastrou a sua senha, pule essa etapa e clique no botão entrar.</p>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/register">
+   <div class="form-group">
+    <label>Nome Completo</label>
+    <input type="text" class="form-control" placeholder="Name" name="name">
+  </div>
+  <div class="form-group">
+    <label>Empresa</label>
+    <input type="text" class="form-control" placeholder="Empresa do grupo em que você trabalha." name="empresa">
+  </div>
+  <div class="form-group">
+    <label>Departamento</label>
+    <input type="text" class="form-control" placeholder="Entre o setor em qe você trabalha" name="departamento">
+  </div>
+    <label>Cargo</label>
+    <input type="text" class="form-control" placeholder="(Opcional) Entre o seu cargo." name="cargo">
+  </div>
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Digite o seu email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Senha</label>
+    <input type="password" class="form-control" placeholder="Senha" name="password">
+  </div>
+  <div class="form-group">
+    <label>Confirme a sua senha</label>
+    <input type="password" class="form-control" placeholder="Redigite a senha por favor" name="password2">
+  </div>
+  <button type="submit" class="btn btn-lg btn-success">Registrar</button>
+</form>

@@ -1,0 +1,14 @@
+
+<h2 class="page-header">{{user.name}},  essa é a tua estória!</h2>
+<p>
+  Escolha um titulo e após escrever o texto, clique no botão salvar.
+  Voce pode alterar o texto quantas vezes quiser, depende da tua inspiração!
+</p>
+<form method="POST" action="/redacao/edit/{{user._id}}">
+
+  <input id="titulo" type="text" placeholder="Você ainda nao escreveu nenhum titulo..." name="titulo" value="{{user.titulo}}">
+<hr>
+  <textarea id="canva" placeholder="Estamos aguardando ansiosamente pelo teu texto..." name="texto">{{user.texto}} </textarea>
+  <hr>
+  <input type="submit" value="Salvar">
+</form>

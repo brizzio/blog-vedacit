@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>VEDACIT Newsletter</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/blog-post.css" rel="stylesheet">
+
+    <style>
+
+              .lead{
+                font-size: 30px;
+              }
+
+             .bloco{
+               margin-bottom:40px;
+               font-size: 25px;
+               color:gray;
+             }
+
+             .itemDeLista{
+               margin-top:30px;
+               padding: 20px;
+               border-style: dotted;
+               border-radius: 12px;
+               border-width: thin;
+               font-size: 25px;
+               color:gray;
+             }
+
+             .destaque{
+               margin-top:50px;
+               color:blue;
+               font-size: 30px;
+             }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-9">
+
+                <!-- Blog Post -->
+
+              {{{body}}}
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-3">
+
+                <!-- Blog Search Well -->
+                <div class="well pesquisa">
+                    <h4>Pesquise</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well categorias">
+                    <h4>Categorias</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+                                <li><a href="/blog">Noticias</a>
+                                </li>
+                                <li><a href="#">Concursos</a>
+                                </li>
+                                <li><a href="#">Instituto</a>
+                                </li>
+                                <li><a href="#">Patrocínios</a>
+                                </li>
+                                <li><a href="#">Eventos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <!-- Side Widget Well -->
+                <h4 class="cabecalho">Assuntos Relacionados:</h4>
+
+
+                        {{#each relacionados}}
+
+                            <div class="well preview">
+                                <h4>{{this.titulo}}</h4>
+                                <p>{{this.texto}} <a href="{{this.refer}}">...ler mais</a></p>
+                            </div>
+
+                        {{/each}}
+
+
+
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>ALTCOM Tecnologia e Inovação &copy; Vedacit News 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.js"></script>
+
+</body>
+
+</html>
